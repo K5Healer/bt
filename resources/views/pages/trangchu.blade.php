@@ -47,8 +47,10 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
                 <p></p>
                 <p style="color: blue;"><strong>LIÊN HỆ PHÒNG BÁN HÀNG CHỦ ĐẦU TƯ</strong> </p>
                 <p><img src="{{asset('images/hotline.jpg  ')}} " alt="" width="256" height="53"></p>
-                <p><img title="Đăng ký nhận báo giá và thông tin dự án Chung cư Athena Complex Pháp Vân"
-                        src="{{asset('images/dang-ky-tu-van.gif ')}}" alt="" width="346" height="150" style="cursor: pointer;"></p>
+                <p><a href="#form-thongtin">
+                    <img title="Đăng ký nhận báo giá và thông tin dự án Chung cư Athena Complex Pháp Vân"
+                        src="{{asset('images/dang-ky-tu-van.gif ')}}" alt="" width="346" height="150" style="cursor: pointer;">
+                </a></p>
             </div>
             <p style="margin-top: 20px;"><img src=" {{asset('images/line-300x27.png')}}" alt="" width="300" height="27"></p>
 
@@ -159,7 +161,7 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
                             thị, hạ tầng giao thông mạnh nhất khu vực phía Nam Hà Nội. Khu đô thị Pháp Vân là một khu đô
                             thị mới phát triển với hàng loạt những dự án bất động sản thu hút khách hàng.</p>
                         <p style="text-align: center">PHÒNG TƯ VẤN BÁN HÀNG LIÊN HỆ</p>
-                        <p style="text-align: center"><img src="images/hotline.png" alt=""></p>
+                        <p style="text-align: center"><img src="images/hotline.jpg" alt=""></p>
                     </div>
 
                     <div class="coll" data-toggle="collapse" data-target="#d2">2. Gần trung tâm và thuận tiện giao thông
@@ -439,6 +441,7 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
             </div>
         </div>
     </section>
+
 
     <div id="IntroMenu" style="right: 25px;">
         <a href=""><span class="icon1" title="Messenger"><i class="fab fa-facebook-messenger"></i></span></a>
