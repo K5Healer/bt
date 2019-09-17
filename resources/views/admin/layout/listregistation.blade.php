@@ -1,5 +1,5 @@
-@extends('admin')
-@section('abc')
+@extends('admin.layout.index')
+@section('content')
 <?php $i= 1 ?>
 <section class="content">
   <div class="row">
@@ -32,8 +32,8 @@
                 <td>{{ $us->sdt }}</td>
                
                <td>
-                  <!--<a href="{{ route('xoa',['id'=>$us->id]) }}" class="btn btn-xs btn-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>-->
-                  <a href="{{ route('suaTKDangNhap',['id'=>$us->id]) }}" class="btn btn-xs btn-primary" onclick="return confirm('Bạn có muốn chỉnh sửa?')">Chỉnh sửa</a>
+                 
+               <a href="{{ route('suaTKDangNhap',['id'=>$us->id]) }}" class="btn btn-xs btn-primary" onclick="return confirm('Bạn có muốn chỉnh sửa?')">Chỉnh sửa</a>
                 </td>
               </tr>
               

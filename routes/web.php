@@ -28,11 +28,14 @@ Route::get('/chitiet', function () {
 })->name('chi-tiet');
 Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
     Route::get('/','PagesController@getIndex')->name('admin');
-    
+    Route::get('admin/login','PagesController@logout')->name('logout');
+    Route::get('/registation','PagesController@getRegistation')->name('loginRegister');
+    Route::post('/registation','PagesController@postRegistation')->name('loginRegister');
+    Route::get('listregistation','PagesController@getListRegistation')->name('listRegister');
+    Route::get('suaTaiKhoanDangNhap/{id}','PagesController@getSuaTaikhoan')->name('suaTKDangNhap');
+    Route::post('suaTaiKhoanDangNhap/{id}','PagesController@postSuaTaikhoan');
     
 });
-Route::get('admin/login','PagesController@logout')->name('logout');
+
 Route::get('/admin/login','PagesController@login')->name('login');
 Route::post('/admin/login','PagesController@postlogin')->name('login');
-Route::get('/registation','PagesController@getRegistation')->name('loginRegister');
-Route::post('/registation','PagesController@postRegistation')->name('loginRegister');

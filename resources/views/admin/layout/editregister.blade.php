@@ -33,7 +33,7 @@
     </div>
   
     <div class="register-box-body">
-      <p class="login-box-msg">Sửa tài khoản Admin</p>
+      <p class="login-box-msg">Đăng kí tài khoản admin</p>
       @if(count($errors)>0)
       <div class= "alert alert-danger">
           @foreach($errors->all() as $err)
@@ -47,7 +47,7 @@
           {{session('thongbao')}}
         </div>
     @endif
-    <form action="suaTaiKhoanDangNhap/{{$users->id}}" method="post">
+      <form action="{{route('loginRegister')}}" method="post">
         @csrf
         <div class="form-group has-feedback">
           <input type="text" name ="hoten" class="form-control" placeholder="Họ và tên">
@@ -79,13 +79,12 @@
           </div>
           <!-- /.col -->
           <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Sửa</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng kí</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
-  
-      
+      <a href="{{route('listRegister')}}" class="text-center">Tôi đã có tài khoản đăng nhập</a>
     </div>
     <!-- /.form-box -->
   </div>

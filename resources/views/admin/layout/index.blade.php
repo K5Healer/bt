@@ -82,10 +82,10 @@
         <!-- Menu Footer-->
         <li class="user-footer">
           <div class="pull-left" style="width:33.333%; float:left">
-          <a href="" class="btn btn-default btn-flat" >Danhsach</a>
+          <a href="{{route('listRegister')}}" class="btn btn-default btn-flat" >Danhsach</a>
           </div>
           <div class="pull-center" style="width:33.333%; float:left">
-          <a href="" class="btn btn-default btn-flat">Đăng kí</a>
+          <a href="{{route('loginRegister')}}" class="btn btn-default btn-flat">Đăng kí</a>
             </div>
           <div class="pull-right" style="width:33.333%; float:left">
             <a href="{{route('logout')}}" class="btn btn-default btn-flat">Log out</a>
@@ -189,7 +189,7 @@
         </section>
 
         <!-- Main content -->
-        @yield('abc')
+        @yield('content')
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
         <!-- /.content -->

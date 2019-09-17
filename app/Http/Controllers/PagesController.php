@@ -66,10 +66,50 @@ class PagesController extends Controller
         $users->username = $request->tendangnhap;
         $users->password = bcrypt($request->matkhau);
         $users->save();
-            return redirect()->route('login')->with('thongbao','Thêm thành công');
+        return redirect()->route('login')->with('thongbao','Thêm thành công');
     }
     public function logout(){
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('logout');
+    }
+    public function getListRegistation(){
+        $users=users::paginate(10);
+        return view('admin.layout.listregistation',['users'=>$users]);
+    }
+    public function getSuaTaikhoan($id)
+    {
+        $users = users::find($id);
+        return view('admin.layout.editRegister',['users'=>$users]);
+    }
+    public function postSuaTaikhoan(Request $request,$id){
+        $users = users::find($id);
+        $this->validate(
+            $request,
+            [
+                'hoten' => 'required',
+                'sodienthoai' => 'required',
+                'tendangnhap'=> 'required',
+                'matkhau'=> 'required',
+                'xacnhanmk'=> 'required|same:matkhau'
+
+            ],
+            [
+                'hoten.required' => 'Bạn chưa nhập tên đăng nhập',
+                'matkhau.required' => 'bạn chưa nhập mật khẩu',
+                'sodienthoai.required' => 'bạn chưa nhập số điện thoại',
+                'tendangnhap.required' => 'bạn chưa nhập tên đăng nhập',
+                'xacnhanmk.required' => 'bạn chưa xác nhận mật khẩu',
+                
+                
+            ]
+        );
+        
+       
+        $users->hoten = $request->hoten;
+        $users->sdt = $request->sodienthoai;
+        $users->username = $request->tendangnhap;
+        $users->password = bcrypt($request->matkhau);
+        $users->save();
+        return redirect()->route('listRegister')->with('thongbao','Thêm thành công');
     }
 }
