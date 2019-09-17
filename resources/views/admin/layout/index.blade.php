@@ -88,7 +88,7 @@
           <a href="" class="btn btn-default btn-flat">Đăng kí</a>
             </div>
           <div class="pull-right" style="width:33.333%; float:left">
-            <a href="" class="btn btn-default btn-flat">Log out</a>
+            <a href="{{route('logout')}}" class="btn btn-default btn-flat">Log out</a>
           </div>
         </li>
       </ul>

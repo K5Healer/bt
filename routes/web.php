@@ -29,6 +29,10 @@ Route::get('/chitiet', function () {
 Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
     Route::get('/','PagesController@getIndex')->name('admin');
     
+    
 });
+Route::get('admin/login','PagesController@logout')->name('logout');
 Route::get('/admin/login','PagesController@login')->name('login');
 Route::post('/admin/login','PagesController@postlogin')->name('login');
+Route::get('/registation','PagesController@getRegistation')->name('loginRegister');
+Route::post('/registation','PagesController@postRegistation')->name('loginRegister');
