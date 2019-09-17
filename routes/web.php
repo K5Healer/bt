@@ -12,14 +12,14 @@
 */
 
 
-Route::get('/', function () {
-    return view('pages.trangchu');
-})->name('trang-chu');
+// Route::get('/', function () {
+//     return view('pages.trangchu');
+// })->name('trang-chu');
 Route::get('/trangchu', function () {
     return view('pages.trangchu');
 })->name('trang-chu');
 
-Route::get('/tintuc', function () {
+Route::get('tintuc', function () {
     return view('pages.tintuc');
 })->name('tin-tuc');
 
