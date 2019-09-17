@@ -17,13 +17,18 @@ Route::get('/', function () {
 })->name('trang-chu');
 Route::get('/trangchu', function () {
     return view('pages.trangchu');
-})->name('trang-chu');
+})->name('trang-chu1');
 
-Route::get('/tintuc', function () {
+Route::get('tintuc', function () {
     return view('pages.tintuc');
 })->name('tin-tuc');
 
 Route::get('/chitiet', function () {
     return view('pages.chitiet');
 })->name('chi-tiet');
-
+Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
+    Route::get('/','PagesController@getIndex')->name('admin');
+    
+});
+Route::get('/admin/login','PagesController@login')->name('login');
+Route::post('/admin/login','PagesController@postlogin')->name('login');

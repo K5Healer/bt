@@ -5,7 +5,7 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
 @endsection
 @section('content')
 <main>
-
+<base href="{{asset('')}}">
     <section id="banner">
         <div id="carouselId" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
