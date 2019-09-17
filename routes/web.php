@@ -26,6 +26,9 @@ Route::get('tintuc', function () {
 Route::get('/chitiet', function () {
     return view('pages.chitiet');
 })->name('chi-tiet');
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('','PagesController@getIndex')->name('admin');
+Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
+    Route::get('/','PagesController@getIndex')->name('admin');
+    
 });
+Route::get('/admin/login','PagesController@login')->name('login');
+Route::post('/admin/login','PagesController@postlogin')->name('login');
