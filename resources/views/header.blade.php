@@ -1,8 +1,8 @@
 <section id="menu">
     <div class="container ">
         <nav class="navbar navbar-expand-md menu navbar-light ">
-         <base href="{{ asset('') }}">
-            <a class="navbar-brand" href="{{ route('trang-chu') }}">
+         <base href="{{ asset('trang-chu1') }}">
+            <a class="navbar-brand" href="{{route('trang-chu1') }}">
                 <img src="images/logo.png" alt="logo">
             </a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
@@ -42,7 +42,7 @@
 
     <nav class="navbar navbar-expand-md menu navbar-light " id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('trang-chu') }}">
+            <a class="navbar-brand" href="{{ route('trang-chu1') }}">
                 <img src="images/logo.png" alt="logo">
             </a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
@@ -52,7 +52,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('trang-chu') }}">Trang chủ</a>
+                        <a class="nav-link" href="{{ route('trang-chu1') }}">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#info">Giới thiệu</a>

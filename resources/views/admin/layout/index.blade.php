@@ -21,6 +21,7 @@
    <!-- Morris chart -->
    <link rel="stylesheet" href="bower_components/morris.js/morris.css">
    <!-- jvectormap -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
    <!-- Date Picker -->
    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
@@ -88,7 +89,7 @@
           <a href="" class="btn btn-default btn-flat">Đăng kí</a>
             </div>
           <div class="pull-right" style="width:33.333%; float:left">
-            <a href="{{route('logout')}}" class="btn btn-default btn-flat">Log out</a>
+            <a href="" class="btn btn-default btn-flat">Log out</a>
           </div>
         </li>
       </ul>
@@ -131,14 +132,14 @@
       <li class="treeview">
         <a href="#">
           <i class="fa fa-sticky-note-o"></i>
-          <span>Giới thiệu về lợi ích</span>
+          <span>Quản lý tin tức</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href=""><i class="fa fa-circle-o"></i> Thêm mới lợi ích</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> Danh sách lợi ích</a></li>
+          <li><a href="{{route('News')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức</a></li>
+          <li><a href="{{route('get_AddNews')}}"><i class="fa fa-circle-o"></i>Thêm mới tin tức</a></li>
         </ul>
       </li>
       <li><a href=""><i class="fa fa-building"></i> <span>Giới thiệu dự án</span></a></li>
@@ -407,6 +408,7 @@
  <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
+
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
@@ -441,6 +443,7 @@
   $(function () {
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
+    CKEDITOR.replace('detail');
     CKEDITOR.replace('editor1')
     //bootstrap WYSIHTML5 - text editor
     $('.textarea').wysihtml5()
