@@ -1,4 +1,5 @@
 
+    
     <div id="IntroMenu" style="right: 25px;">
         <a href=""><span class="icon1" title="Messenger"><i class="fab fa-facebook-messenger"></i></span></a>
         <a href=""><span class="icon2" title="Điện thoại"><i class="fas fa-phone"></i></span></a>
@@ -23,7 +24,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <form action="" method="post" style="max-width: 600px">
+                    <form action="{{route('thongtin')}}" method="post" style="max-width: 600px">
+                        @csrf
                         <label>Họ và tên </label>
                         <input type="text" name="name_user" placeholder="Họ và tên của bạn ... ">
                         <label>Số điện thoại </label>

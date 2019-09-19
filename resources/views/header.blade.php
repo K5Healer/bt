@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ route('trang-chu1') }}">Trang chủ</a>
+                    <a class="nav-link" href="{{ route('trang-chu') }}">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#info">Giới thiệu</a>

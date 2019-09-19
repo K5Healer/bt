@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Symfony\Component\Mime\Email;
 
-class CreateGioithieuvitriTable extends Migration
+class CreateThongtinkhachhangTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +14,11 @@ class CreateGioithieuvitriTable extends Migration
      */
     public function up()
     {
-        Schema::create('gioithieuvitri', function (Blueprint $table) {
+        Schema::create('thongtinkhachhang', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('image');
-            $table->string('title');
-            $table->string('title_gioithieudiadiem');
+            $table->string('hoten');
+            $table->string('sdt');
+            $table->string('email');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateGioithieuvitriTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gioithieuvitri');
+        Schema::dropIfExists('thongtinkhachhang');
     }
 }

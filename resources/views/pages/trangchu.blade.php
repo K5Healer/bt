@@ -4,9 +4,13 @@
 Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
 @endsection
 @section('content')
+
+
 <main>
 <base href="{{asset('')}}">
+
     <section id="banner">
+            
         <div id="carouselId" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselId" data-slide-to="0" class="active"></li>
@@ -17,7 +21,7 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
                     <img src="{{asset('images/banner1.jpg')}}" alt="First slide">
                 </div>
                 <div class="carousel-item ">
-                    <img src="{{asset('images/banner1.jpg')}}" alt="First slide">
+                    <img src="{{asset('images/banner1.jpg')}}" alt="Secound slide">
                 </div>
 
             </div>
@@ -30,6 +34,7 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        
     </section>
 
     <section id="info">

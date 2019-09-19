@@ -123,8 +123,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href=""><i class="fa fa-circle-o"></i> Thêm banner phần đầu</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> Danh sách banner phần đầu</a></li>
+          <li><a href="{{route('thembanner')}}"><i class="fa fa-circle-o"></i> Thêm banner phần đầu</a></li>
+          <li><a href="{{route('danhsachbanner')}}"><i class="fa fa-circle-o"></i> Danh sách banner phần đầu</a></li>
           <li><a href=""><i class="fa fa-circle-o"></i>Banner tư vấn</a></li>
         </ul>
       </li>
@@ -156,7 +156,7 @@
           <li><a href=""><i class="fa fa-circle-o"></i> Danh sách căn hộ</a></li>
         </ul>
       </li>
-      <li><a href=""><i class="fa fa-building"></i> <span>Danh sách khách hàng </span>
+      <li><a href="{{route('thongtin')}}"><i class="fa fa-building"></i> <span>Danh sách khách hàng </span>
         <p style="text-align: center">muốn tư vấn</p></a></li>
         <li class="treeview">
           <a href="#">

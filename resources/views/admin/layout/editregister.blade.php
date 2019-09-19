@@ -47,18 +47,18 @@
           {{session('thongbao')}}
         </div>
     @endif
-      <form action="{{route('loginRegister')}}" method="post">
+      <form action="{{route('loginRegister',['id'=>$users->id])}}" method="post">
         @csrf
         <div class="form-group has-feedback">
-          <input type="text" name ="hoten" class="form-control" placeholder="Họ và tên">
+          <input type="text" name ="hoten" class="form-control" value = "{{$users->username}}">
           <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="text" name = "sodienthoai"class="form-control" placeholder="Số điện thoại">
+          <input type="text" name = "sodienthoai"class="form-control" value = "{{$users->hoten}}">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-            <input type="text" name = 'tendangnhap'class="form-control" placeholder="Tên đăng nhập">
+            <input type="text" name = 'tendangnhap'class="form-control" value = "{{$users->tendangnhap}}">
            <span  class="glyphicon glyphicon-user  form-control-feedback"> </span> 
           </div>
         <div class="form-group has-feedback">
