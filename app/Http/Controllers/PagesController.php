@@ -19,20 +19,26 @@ class PagesController extends Controller
         $this->validate(
             $request,
             [
-                'tendangnhap' => 'required',
-                'matkhau' => 'required'
+                'username' => 'required',
+                'password' => 'required'
             ],
             [
-                'tendangnhap.required' => 'Bạn chưa nhập tên đăng nhập',
-                'matkhau.required' => 'Bạn chưa nhập mật khẩu'
+                'uername.required' => 'Bạn chưa nhập tên đăng nhập',
+                'password.required' => 'Bạn chưa nhập mật khẩu'
 
             ]
         );
-        if (Auth::attempt(['username' => $request->tendangnhap, 'password' => $request->matkhau])) {
+        if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
             return redirect()->route('admin');
         } else {
-           
-            return redirect()->route('login')->with('thongbao', 'Đăng nhập không thành công');
+           if(['username'=>$request->username]){
+            return redirect()->route('login')->with('thongbao', 'user sai');
+           }
+           else if(['password'=>$request->password]){
+            return redirect()->route('login')->with('thongbao', 'pass sai');
+           }
+           else{
+            return redirect()->route('login')->with('thongbao', 'Đăng nhập không thành công');}
         }
     }
     public function getRegistation()

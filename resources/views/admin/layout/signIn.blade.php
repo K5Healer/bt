@@ -50,11 +50,11 @@
       <form action="{{route('login')}}" method="post">
         @csrf
         <div class="form-group has-feedback">
-          <input type="text" name = "tendangnhap"class="form-control" placeholder="Tên đăng nhập">
+          <input type="text" name ="username" class="form-control" placeholder="Tên đăng nhập">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="password" name = "matkhau"class="form-control" placeholder="Mật khẩu">
+          <input type="password" name = "password"class="form-control" placeholder="Mật khẩu">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">

@@ -1,8 +1,8 @@
 <section id="menu">
     <div class="container ">
         <nav class="navbar navbar-expand-md menu navbar-light ">
-         <base href="{{ asset('') }}">
-            <a class="navbar-brand" href="{{ route('trang-chu') }}">
+         <base href="{{ asset('trang-chu') }}">
+            <a class="navbar-brand" href="{{route('trang-chu') }}">
                 <img src="images/logo.png" alt="logo">
             </a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"

@@ -19,7 +19,6 @@ class Controller extends BaseController
         $str = preg_replace('/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ|Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ)/', 'u', $str);
         $str = preg_replace('/(ỳ|ý|ỵ|ỷ|ỹ|Ỳ|Ý|Ỵ|Ỷ|Ỹ)/', 'y', $str);
         $str = preg_replace('/(đ|Đ)/', 'd', $str);
-        
         $exp = explode(' ',$str);
         $kq='';
         foreach($exp as $val){
