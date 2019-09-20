@@ -21,6 +21,7 @@
    <!-- Morris chart -->
    <link rel="stylesheet" href="bower_components/morris.js/morris.css">
    <!-- jvectormap -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
    <!-- Date Picker -->
    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
@@ -82,13 +83,13 @@
         <!-- Menu Footer-->
         <li class="user-footer">
           <div class="pull-left" style="width:33.333%; float:left">
-          <a href="" class="btn btn-default btn-flat" >Danhsach</a>
+          <a href="{{route('listRegister')}}" class="btn btn-default btn-flat" >Danhsach</a>
           </div>
           <div class="pull-center" style="width:33.333%; float:left">
-          <a href="" class="btn btn-default btn-flat">Đăng kí</a>
+          <a href="{{route('loginRegister')}}" class="btn btn-default btn-flat">Đăng kí</a>
             </div>
           <div class="pull-right" style="width:33.333%; float:left">
-            <a href="" class="btn btn-default btn-flat">Log out</a>
+            <a href="{{route('login')}}" class="btn btn-default btn-flat">Log out</a>
           </div>
         </li>
       </ul>
@@ -123,22 +124,22 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href=""><i class="fa fa-circle-o"></i> Thêm banner phần đầu</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> Danh sách banner phần đầu</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i>Banner tư vấn</a></li>
+          <li><a href="{{route('thembanner')}}"><i class="fa fa-circle-o"></i> Thêm banner phần đầu</a></li>
+          <li><a href="{{route('danhsachbanner')}}"><i class="fa fa-circle-o"></i> Danh sách banner phần đầu</a></li>
+          
         </ul>
       </li>
       <li class="treeview">
         <a href="#">
           <i class="fa fa-sticky-note-o"></i>
-          <span>Giới thiệu về lợi ích</span>
+          <span>Quản lý tin tức</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href=""><i class="fa fa-circle-o"></i> Thêm mới lợi ích</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i> Danh sách lợi ích</a></li>
+          <li><a href="{{route('News')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức</a></li>
+          <li><a href="{{route('get_AddNews')}}"><i class="fa fa-circle-o"></i>Thêm mới tin tức</a></li>
         </ul>
       </li>
       <li><a href=""><i class="fa fa-building"></i> <span>Giới thiệu dự án</span></a></li>
@@ -156,7 +157,7 @@
           <li><a href=""><i class="fa fa-circle-o"></i> Danh sách căn hộ</a></li>
         </ul>
       </li>
-      <li><a href=""><i class="fa fa-building"></i> <span>Danh sách khách hàng </span>
+      <li><a href="{{route('thongtin')}}"><i class="fa fa-building"></i> <span>Danh sách khách hàng </span>
         <p style="text-align: center">muốn tư vấn</p></a></li>
         <li class="treeview">
           <a href="#">
@@ -189,7 +190,7 @@
         </section>
 
         <!-- Main content -->
-        @yield('abc')
+        @yield('content')
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
         <!-- /.content -->
@@ -407,6 +408,7 @@
  <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
+
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
@@ -441,6 +443,7 @@
   $(function () {
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
+    CKEDITOR.replace('detail');
     CKEDITOR.replace('editor1')
     //bootstrap WYSIHTML5 - text editor
     $('.textarea').wysihtml5()

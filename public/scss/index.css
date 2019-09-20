@@ -230,12 +230,12 @@
   #tintuc .cap-main, #content .cap-main {
     padding-top: 50px;
     padding-bottom: 50px; }
-    #tintuc .cap-main h3, #content .cap-main h3 {
+    #tintuc .cap-main h3, #content .cap-main h3,#form-thongtin .cap-main h3 {
       font-size: 26px;
       color: black;
       text-align: center;
       font-weight: bold; }
-    #tintuc .cap-main:after, #content .cap-main:after {
+    #tintuc .cap-main:after, #content .cap-main:after, #form-thongtin .cap-main:after {
       content: "";
       display: block;
       width: 100px;
@@ -417,7 +417,6 @@
     border-color: #c4161c; }
 
 #footer {
-  margin-top: 3%;
   background-color: black;
   text-align: center;
   padding: 20px; }
@@ -517,8 +516,8 @@
   .menu .nav-item .nav-link {
     color: black;
     /*/*font-size: 10px !important;*/*/
-    text-transform: uppercase;text-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transform
-    font-weight: bold;font-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weight }
+    text-transform: uppercase;text-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transform
+    font-weight: bold;font-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weight }
   .menu .item {
     margin-left: 30px; }
     .menu .item .link {
@@ -597,8 +596,8 @@
   .menu .nav-item .nav-link {
     color: black;
     /*/*font-size: 10px !important;*/*/
-    text-transform: uppercase;text-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transform
-    font-weight: bold;font-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weight }
+    text-transform: uppercase;text-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transformtext-transform
+    font-weight: bold;font-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weightfont-weight }
   .menu .item {
     margin-left: 30px; }
     .menu .item .link {
@@ -630,4 +629,81 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+section#form-thongtin {
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* margin-top: 3%; */
+    background: -webkit-gradient(linear, left top, left bottom, from(#131c45), to(#020202));
+    background: -webkit-linear-gradient(top, #131c45, #020202);
+    background: -o-linear-gradient(top, #131c45, #020202);
+    background: linear-gradient(to bottom, #131c45, #020202);
+    -webkit-clip-path: polygon(0 0, calc(50% - 30px) 0, 50% calc(0% + 30px), calc(50% + 30px) 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(50% - 30px) 0, 50% calc(0% + 30px), calc(50% + 30px) 0, 100% 0, 100% 100%, 0 100%);
+}
+#form-thongtin .cap-main h3{
+  color: #fff;
+}
+section#form-thongtin .row > div{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section#form-thongtin form{
+
+}
+section#form-thongtin input{
+  width: 100%;
+  margin-bottom: 10px;
+  line-height: 35px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+section#form-thongtin input::-webkit-input-placeholder{
+  color: #888;
+  font-size: 13px;
+}
+section#form-thongtin input::-moz-placeholder{
+  color: #888;
+  font-size: 13px;
+}
+section#form-thongtin input:-ms-input-placeholder{
+  color: #888;
+  font-size: 13px;
+}
+section#form-thongtin input::-ms-input-placeholder{
+  color: #888;
+  font-size: 13px;
+}
+section#form-thongtin input::placeholder{
+  color: #888;
+  font-size: 13px;
+}
+section#form-thongtin label{
+  color: #fff;
+}
+section#form-thongtin button{
+  line-height: 35px;
+  padding: 0 35px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  border:none;
+  outline:none;
+  margin-top: 20px;
+  background: #F7941D;
+  border-radius: 5px;
+  color: #fff;
+}
+section#form-thongtin button:hover{
+  background: red;
+  -webkit-box-shadow: 0px 0px 10px #fff;
+          box-shadow: 0px 0px 10px #fff;
 }
