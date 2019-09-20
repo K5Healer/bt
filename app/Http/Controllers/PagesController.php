@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 use App\users;
 use App\thongtinkhachhang;
 use App\bannerheader;
+use Exception;
+
 class PagesController extends Controller
 {
+    public function getTrangchu () {
+        $bannerheader = bannerheader::all();
+        return view('pages.trangchu',['bannerheader'=>$bannerheader]);
+    }
     public function getIndex(){
         return view('admin.layout.index');
     }
@@ -31,14 +37,9 @@ class PagesController extends Controller
         if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
             return redirect()->route('admin');
         } else {
-           if(['username'=>$request->username]){
-            return redirect()->route('login')->with('thongbao', 'user sai');
-           }
-           else if(['password'=>$request->password]){
-            return redirect()->route('login')->with('thongbao', 'pass sai');
-           }
-           else{
-            return redirect()->route('login')->with('thongbao', 'Đăng nhập không thành công');}
+          
+            return redirect()->route('login')->with('thongbao', 'Bạn nhập sai mật khẩu hoặc tên đăng nhập');
+           
         }
     }
     public function getRegistation()
@@ -78,7 +79,7 @@ class PagesController extends Controller
     }
     public function logout(){
         Auth::logout();
-        return redirect()->route('logout');
+        return redirect()->route('login');
     }
     public function getListRegistation(){
         $users=users::paginate(10);

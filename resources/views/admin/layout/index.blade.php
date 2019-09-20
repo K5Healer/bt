@@ -89,7 +89,7 @@
           <a href="{{route('loginRegister')}}" class="btn btn-default btn-flat">Đăng kí</a>
             </div>
           <div class="pull-right" style="width:33.333%; float:left">
-            <a href="" class="btn btn-default btn-flat">Log out</a>
+            <a href="{{route('login')}}" class="btn btn-default btn-flat">Log out</a>
           </div>
         </li>
       </ul>
@@ -126,7 +126,7 @@
         <ul class="treeview-menu">
           <li><a href="{{route('thembanner')}}"><i class="fa fa-circle-o"></i> Thêm banner phần đầu</a></li>
           <li><a href="{{route('danhsachbanner')}}"><i class="fa fa-circle-o"></i> Danh sách banner phần đầu</a></li>
-          <li><a href=""><i class="fa fa-circle-o"></i>Banner tư vấn</a></li>
+          
         </ul>
       </li>
       <li class="treeview">

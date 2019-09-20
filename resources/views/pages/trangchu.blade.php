@@ -1,30 +1,27 @@
 @extends('master-layout')
-
 @section('title')
 Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
 @endsection
 @section('content')
-
-
 <main>
-<base href="{{asset('')}}">
-
     <section id="banner">
-            
+        
         <div id="carouselId" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselId" data-slide-to="1" class=""></li>
+                @foreach($bannerheader as $key=>$it)
+                <li data-target="#carouselId" data-slide-to="{{$key}}" class="{{$key == 0 ? 'active' : ''}}"></li>
+                @endforeach
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img src="{{asset('images/banner1.jpg')}}" alt="First slide">
+                @foreach($bannerheader as $it)
+                <div class="carousel-item {{$loop->index == 0 ? 'active' : ''}}">
+                    <img src="image/banner/{{!empty($it->image) ?  $it->image : 'default.jpg'}}" alt="First slide">
                 </div>
-                <div class="carousel-item ">
-                    <img src="{{asset('images/banner1.jpg')}}" alt="Secound slide">
-                </div>
-
+                @endforeach
             </div>
+           
+        </div>
+       
             <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -34,9 +31,7 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        
     </section>
-
     <section id="info">
         <div class="container">
             <div class="infoo">
