@@ -63,11 +63,7 @@ Tin tức-Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
             </div>
         </div>
     </section>
-    <div class="container phan">
-        <ul class="pagination">
-           {{ $post->links() }}
-        </ul>
-    </div>
+    
 
 </main>
 @endsection

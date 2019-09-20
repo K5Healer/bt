@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\NewsModel;
 use Illuminate\Http\Request;
-
+use App\bannerheader;
 class NewsController extends Controller
 {
     /**
@@ -99,7 +99,7 @@ class NewsController extends Controller
             $image = $avatar;
         }
         else{
-            $image= 'no-img.jpg';
+            $image= $data->image;
         }
         $data->image=$image;
         $data->Detail=$request->detail;
@@ -125,9 +125,15 @@ class NewsController extends Controller
     
         $model=NewsModel::get();
          $search=$request->get('search');
-         $post= NewsModel::where('title','like','%'.$search.'%')->paginate(6);
+         $post= NewsModel::where('title','like','%'.$search.'%')->orderBy('id','desc')->limit(6)->get();
          return view('pages.Search',['post'=>$post,'model'=>$model]);
    }
+   public function showtrangchu(){
+    $head=NewsModel::orderBy('created_at','desc')->limit(3)->get();
+    // dd($head);
+    $bannerheader = bannerheader::all();
+    return view('pages.trangchu',['head'=>$head,'bannerheader'=>$bannerheader]);
+}
     /**
      * Update the specified resource in storage.
      *

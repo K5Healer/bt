@@ -386,56 +386,26 @@ Chung cư Athena Complex Pháp Vân – Chủ đầu tư 379
                 </h3>
             </div>
             <div class="row">
+                @foreach($head as $row)
+               
                 <div class="col-md-4 ">
-                    <a href="">
+                    <a href="{{route('chitiet',['id'=>$row->id])}}">
                         <div class="plus">
-                            <img src="images/tt1.png" alt="">
+                            <img src="images/banner/{{$row->image}}" alt="">
                         </div>
                         <div class="cap-mat">
-                            <h3>CHUNG CƯ ATHENA COMPLEX PHÁP VÂN – LỰA CHỌN VÀNG CHO KHÁCH HÀNG TẦM TRUNG</h3>
-                            <p>Chung cư Athena Complex Pháp Vân được khởi công vào tháng 9/2018,...</p>
+                            <h3>{{$row->content}}</h3>
+                            <p>{{$row->title}}</p>
                         </div>
                         <div class="info">
-                            <p><i class="far fa-calendar-alt"></i> <span>TH6 27,2019</span>&emsp;&emsp;<i
-                                    class="far fa-comment"></i><span>Bình luận</span>
+                            <p class="text-center"><i class="far fa-calendar-alt"></i> <span><?php $date=date_create($row->updated_at);echo date_format($date,"Y/m/d");?></span>&emsp;&emsp;<i
+                                    class="far fa-comment"></i>
                             </p>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 ">
-                    <a href="">
-                        <div class="plus">
-                            <img src="images/tt2.jpg" alt="">
-
-                        </div>
-                        <div class="cap-mat">
-                            <h3>CHUNG CƯ ATHENA COMPLEX PHÁP VÂN – LỰA CHỌN VÀNG CHO KHÁCH HÀNG TẦM TRUNG</h3>
-                            <p>Dự án chung cư Athena Complex với tổng diện tích 6088 m2 sẽ được cất ...</p>
-                        </div>
-                        <div class="info">
-                            <p><i class="far fa-calendar-alt"></i> <span>TH6 27,2019</span>&emsp;&emsp;<i
-                                    class="far fa-comment"></i><span>Bình luận</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="{{ route('chi-tiet') }}">
-                        <div class="plus">
-                            <img src="images/tt1.png" alt="">
-
-                        </div>
-                        <div class="cap-mat">
-                            <h3>CHUNG CƯ ATHENA COMPLEX PHÁP VÂN – LỰA CHỌN VÀNG CHO KHÁCH HÀNG TẦM TRUNG</h3>
-                            <p>Chung cư Athena Complex Pháp Vân được khởi công vào tháng 9/2018,... </p>
-                        </div>
-                        <div class="info">
-                            <p><i class="far fa-calendar-alt"></i> <span>TH6 27,2019</span>&emsp;&emsp;<i
-                                    class="far fa-comment"></i><span>Bình luận</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
+              
             </div>
         </div>
     </section>
